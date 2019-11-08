@@ -5,8 +5,8 @@ export const GET_SMURFS_SUCCESS = 'GET_SMURFS_SUCCESS';
 export const GET_SMURFS_FAILURE = 'GET_SMURFS_FAILURE';
 
 export const smurfsLoading = () => ({ type: GET_SMURFS_LOADING });
-export const smurfsLoadingSuccess = () => ({ type: GET_SMURFS_SUCCESS });
-export const smurfsLoadingFailure = () => ({ type: GET_SMURFS_FAILURE });
+export const smurfsLoadingSuccess = data => ({ type: GET_SMURFS_SUCCESS, payload: data });
+export const smurfsLoadingFailure = error => ({ type: GET_SMURFS_FAILURE, payload: error });
 
 export function getSmurfs() {
     return function(dispatch) {

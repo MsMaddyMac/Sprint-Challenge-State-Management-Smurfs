@@ -12,26 +12,24 @@ const SmurfCard = props => {
            {props.isFetching && <h3> Here come the Smurfs!!</h3>}
             {props.error && <div>{props.error.message}</div>}
             {/* <div className="smurf" key={props.smurfs.id}>
-                <h2>Name: {props.smurfs.name}</h2>
-
-            </div> */}
+                <h2>Name: {smurfs.name}</h2>
+            </div>  */}
+            <div className="smurfList">
+                {props.smurfs.map((smurf, id) => (
+                    <div className="smurf" key={id}>
+                        <h1>{smurf.name}</h1>
+                    </div> 
+                    
+                
+                ))}
+            </div>
            
            
         </div>
     )
 }
 
-// const mapStateToProps = state => {
-//     return {
-//       name: state.name,
-//       age: state.age
-//     };
-//   };
 
-// export default connect(
-//     mapStateToProps,
-//     { getSmurfs } 
-//   )(SmurfCard);
 export default connect(state => {
     return state;})(SmurfCard);
 
