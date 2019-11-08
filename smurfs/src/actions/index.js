@@ -19,3 +19,23 @@ export function getSmurfs() {
         );
     };
 }
+
+export const POST_NEW_SMURF_POSTING = 'POST_NEW_SMURF_POSTING';
+export const POST_NEW_SMURF_SUCCESS = 'POST_NEW_SMURF_SUCCESS';
+export const POST_NEW_SMURF_FAILURE = 'POST_NEW_SMURF_FAILURE';
+
+export const newSmurfPosting = () => ({ type: POST_NEW_SMURF_POSTING })
+export const newSmurfSuccess = () => ({ type: POST_NEW_SMURF_SUCCESS })
+export const newSmurfFailure = () => ({ type: POST_NEW_SMURF_FAILURE })
+
+export function postSmurf(smurf) {
+    return function(dispatch) {
+        dispatch(newSmurfPosting());
+        return axios
+        .post(`http://localhost:3333/smurfs`, smurf)
+        .then(res => {console.log(res.data)
+            dispatch(newSmurfSuccess())})
+        .catch(err => dispatch(newSmurfFailure(), err)
+        );
+    }
+}

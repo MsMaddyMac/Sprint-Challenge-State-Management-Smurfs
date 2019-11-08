@@ -1,4 +1,8 @@
-import { GET_SMURFS_LOADING, GET_SMURFS_SUCCESS, GET_SMURFS_FAILURE } from '../actions';
+import { 
+        GET_SMURFS_LOADING, GET_SMURFS_SUCCESS, 
+        GET_SMURFS_FAILURE, POST_NEW_SMURF_POSTING, 
+        POST_NEW_SMURF_SUCCESS, POST_NEW_SMURF_FAILURE 
+} from '../actions';
 
 const initialState = {
     smurfs: [],
@@ -18,7 +22,7 @@ function reducer(state = initialState, action) {
                 return {
                     ...state,
                     smurfs: action.payload,
-                    isFetching: true,
+                    isFetching: false,
                     error: null
             };  
         case GET_SMURFS_FAILURE:
