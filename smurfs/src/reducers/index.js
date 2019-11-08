@@ -1,11 +1,8 @@
-
-const initialState = [
-    {
-        name: 'Brainy',
-        age: 200,
-        height: '5cm'
-    }
-]
+const initialState = {
+    smurfs: [],
+    error: null,
+    isFetching: false
+};
 
 function reducer(state = initialState, action) {
     switch (action.type) {
