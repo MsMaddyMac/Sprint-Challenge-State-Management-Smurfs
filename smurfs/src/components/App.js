@@ -9,6 +9,7 @@ import thunk from 'redux-thunk';
 // component imports
 import reducer from '../reducers';
 import SmurfCard from './SmurfCard';
+import SmurfForm from './SmurfForm';
 
 
 const store = createStore(
@@ -23,6 +24,7 @@ function App () {
       <div className="App">
       <h1>Meet the Smurfs!</h1>
         <SmurfCard />
+        <SmurfForm />
       </div>
     </Provider>
   )

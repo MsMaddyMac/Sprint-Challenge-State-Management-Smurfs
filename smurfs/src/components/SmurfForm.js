@@ -10,10 +10,29 @@ function SmurfForm(props) {
     const [inputs, setInputs] = useState({
         name: "",
         age: 0,
-        height: "",
-        id: props.smurfs[props.smurfs.length -1].id + 1
+        height: ""
     })
 
+    const handleChange = e => setInputs({...inputs, [e.target.name]: e.target.value});
+
+    const handleSubmit = async e => {
+        e.preventDefault();
+        props.dispatch(postSmurf(inputs));
+    }
+
+    return (
+        <>
+        <form onSubmit={handleSubmit}>
+            <label>Name</label>
+            <input type='text' name='name' onChange={handleChange} value={inputs.name} />
+            <label>Age</label>
+            <input type='text' name='age' onChange={handleChange} value={inputs.age} />
+            <label>Height</label>
+            <input type='text' name='height' onChange={handleChange} value={inputs.height} />
+            <button type='submit'>Submit</button>
+        </form>
+        </>
+    )
 
 }
 
