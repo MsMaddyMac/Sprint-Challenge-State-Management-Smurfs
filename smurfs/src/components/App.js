@@ -10,6 +10,11 @@ import thunk from 'redux-thunk';
 import reducer from '../reducers';
 import SmurfCard from './SmurfCard';
 import SmurfForm from './SmurfForm';
+// image imports
+import Brainey from '../images/Brainey.jpeg';
+import Papa from '../images/Papa.png';
+
+
 
 
 const store = createStore(
@@ -17,14 +22,19 @@ const store = createStore(
   (applyMiddleware(thunk, logger))
 );
 
-
 function App () {
   return (
     <Provider store={store}>
       <div className="App">
-      <h1>Meet the Smurfs!</h1>
-        <SmurfCard />
-        <SmurfForm />
+        <header>
+          <img className="papa" src={Papa}></img>
+          <h1>Meet the Smurfs!</h1>
+          <img className="brainey" src={Brainey}></img>
+        </header>
+        <div className="container">    
+          <SmurfCard />
+          <SmurfForm /> 
+        </div>
       </div>
     </Provider>
   )
