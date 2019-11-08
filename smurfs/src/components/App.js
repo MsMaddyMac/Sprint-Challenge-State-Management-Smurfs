@@ -1,14 +1,21 @@
 import React from 'react'
 import "./App.css";
 // // Redux imports
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 // react-redux imports
 import { Provider } from 'react-redux';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
 // component imports
 import reducer from '../reducers';
 import SmurfCard from './SmurfCard';
 
-const store = createStore(reducer);
+
+const store = createStore(
+  reducer, 
+  (applyMiddleware(thunk, logger))
+);
+
 
 function App () {
   return (
