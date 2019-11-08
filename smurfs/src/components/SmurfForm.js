@@ -29,7 +29,7 @@ function SmurfForm(props) {
             <input type='text' name='age' onChange={handleChange} value={inputs.age} />
             <label>Height</label>
             <input type='text' name='height' onChange={handleChange} value={inputs.height} />
-            <button type='submit'>Submit</button>
+            <button className="submit-btn" type='submit'>Submit</button>
         </form>
         </>
     )

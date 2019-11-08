@@ -6,6 +6,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 70px;
 }
 
 .papa {
@@ -23,9 +24,36 @@ h1 {
   font-size: 2.5em;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+form {
+  background: #c7af54;
+  color: black;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+button {
+  background: #c62a38;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  width: 30%;
+  margin-top: 10px;
 }
 
 .App-header {
@@ -43,7 +71,4 @@ h1 {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+
