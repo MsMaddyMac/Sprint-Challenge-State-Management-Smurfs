@@ -21,17 +21,18 @@ function SmurfForm(props) {
     }
 
     return (
-        <>
-        <form onSubmit={handleSubmit}>
-            <label>Name</label>
-            <input type='text' name='name' onChange={handleChange} value={inputs.name} />
-            <label>Age</label>
-            <input type='text' name='age' onChange={handleChange} value={inputs.age} />
-            <label>Height</label>
-            <input type='text' name='height' onChange={handleChange} value={inputs.height} />
-            <button className="submit-btn" type='submit'>Submit</button>
-        </form>
-        </>
+        <div className="form">
+            <h2>Add a Smurf!</h2>
+            <form onSubmit={handleSubmit}>
+                <label>Name</label>
+                <input type='text' name='name' onChange={handleChange} value={inputs.name} />
+                <label>Age</label>
+                <input type='text' name='age' onChange={handleChange} value={inputs.age} />
+                <label>Height</label>
+                <input type='text' name='height' onChange={handleChange} value={inputs.height} />
+                <button className="submit-btn" type='submit'>Submit</button>
+            </form>
+        </div>
     )
 
 }

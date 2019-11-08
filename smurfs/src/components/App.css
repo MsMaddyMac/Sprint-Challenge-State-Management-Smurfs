@@ -24,26 +24,39 @@ h1 {
   font-size: 2.5em;
 }
 
+h2 {
+  font-family: 'Bowlby One SC', cursive;
+  color: #2f8bca;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  width: 80%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
 }
 
 form {
-  background: #c7af54;
+  background:  #2f8bca;
   color: black;
-  width: 20%;
+  width: 40%;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 3px solid #cad0d3;
   border-radius: 3px;
   justify-content: center;
   align-items: center;
   padding: 10px 10px 10px 10px;
   text-align: center;
-  margin-left: 50px;
 }
 
 button {
@@ -55,6 +68,33 @@ button {
   width: 30%;
   margin-top: 10px;
 }
+
+/* Flip card styling */
+.flipcard-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flipcard-front, .flipcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.character-card:hover .flipcard-inner  {
+  transform: rotateX(180deg);
+}
+
+.flipcard-back {
+  transform: rotateX(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .App-header {
   background-color: #222;
