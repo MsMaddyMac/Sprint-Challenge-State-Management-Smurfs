@@ -19,19 +19,41 @@ function reducer(state = initialState, action) {
                 error: null
             };
         case GET_SMURFS_SUCCESS:
-                return {
-                    ...state,
-                    smurfs: action.payload,
-                    isFetching: false,
-                    error: null
+            return {
+                ...state,
+                smurfs: action.payload,
+                isFetching: false,
+                error: null
             };  
         case GET_SMURFS_FAILURE:
-                return {
-                    ...state,
-                    smurfs: [],
-                    isFetching: false,
-                    error: action.payload
-                };  
+            return {
+                ...state,
+                smurfs: [],
+                isFetching: false,
+                error: action.payload
+            };  
+        case POST_NEW_SMURF_POSTING:
+            return {
+                ...state,
+                isFetching: true,
+                errors: null,
+                smurfs: []
+            };
+        case POST_NEW_SMURF_SUCCESS:
+            return {
+                ...state,
+                isFetching: false, 
+                errors: null,
+                smurfs: action.payload
+            };
+        case POST_NEW_SMURF_FAILURE:
+            return {
+                ...state,
+                isFetching: false,
+                errors: action.payload,
+                smurfs: []
+            }
+        
         default:
             return state;
     }
