@@ -15,7 +15,7 @@ function SmurfForm(props) {
 
     const handleChange = e => setInputs({...inputs, [e.target.name]: e.target.value});
 
-    const handleSubmit = async e => {
+    const handleSubmit = e => {
         e.preventDefault();
         props.dispatch(postSmurf(inputs));
     }
@@ -36,6 +36,8 @@ function SmurfForm(props) {
     )
 
 }
+
+
 
 export default connect(state => {
     return state;})(SmurfForm);

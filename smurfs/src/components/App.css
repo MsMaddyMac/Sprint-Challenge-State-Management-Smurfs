@@ -62,6 +62,7 @@ form {
 button {
   background: #c62a38;
   font-size: 1rem;
+  border-radius: 3px;
 }
 
 .submit-btn {

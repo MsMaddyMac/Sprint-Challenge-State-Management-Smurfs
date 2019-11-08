@@ -27,9 +27,9 @@ function App () {
     <Provider store={store}>
       <div className="App">
         <header>
-          <img className="papa" src={Papa}></img>
+          <img className="papa" alt="Papa Smurf" src={Papa}></img>
           <h1>Meet the Smurfs!</h1>
-          <img className="brainey" src={Brainey}></img>
+          <img className="brainey" alt="Brainey Smurf" src={Brainey}></img>
         </header>
         <div className="container">    
           <SmurfCard />
