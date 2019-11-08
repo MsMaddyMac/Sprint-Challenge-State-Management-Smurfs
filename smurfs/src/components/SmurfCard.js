@@ -1,6 +1,7 @@
 import React from 'react';
 // react-redux imports
 import { connect } from 'react-redux';
+// action import
 import { getSmurfs } from '../actions';
 
 
