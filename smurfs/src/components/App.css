@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-
+/* header styling */
 header {
   display: flex;
   justify-content: center;
@@ -29,6 +29,7 @@ h2 {
   color: #2f8bca;
 }
 
+/* main container sytling */
 .container {
   display: flex;
   justify-content: center;
@@ -59,10 +60,16 @@ form {
   text-align: center;
 }
 
+
+/* button sytling */
 button {
   background: #c62a38;
   font-size: 1rem;
   border-radius: 3px;
+}
+
+.get-btn {
+  margin-bottom: 15px;
 }
 
 .submit-btn {
@@ -96,20 +103,5 @@ button {
   align-items: center;
 }
 
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
 
 

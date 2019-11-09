@@ -31,7 +31,7 @@ function App () {
           <h1>Meet the Smurfs!</h1>
           <img className="brainey" alt="Brainey Smurf" src={Brainey}></img>
         </header>
-        <div className="container">    
+        <div className="container"> 
           <SmurfCard />
           <SmurfForm /> 
         </div>
